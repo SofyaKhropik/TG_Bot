@@ -1,0 +1,11 @@
+services:
+  telegram_bot:
+    build:
+      context: .
+    container_name: telegram_bot
+    volumes:
+      - ./data:/app/data
+    environment:
+      - TOKEN=8050992511:AAHYNTNhCf56qjdktQhqONvGOE5yArt-2ms
+      - API_BASE_URL=https://democratic-glynda-gleb-8a971912.koyeb.app/api/v1/schedule
+    restart: unless-stopped
